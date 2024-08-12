@@ -10,21 +10,30 @@
     <!-- <script src="script.js"></script> -->
 </head>
 <body>
+   
     <header class="header">
         <a href="#home" class="logo"> I'm
             <span>UniApplyBot</span>
         </a>
 
         <i class='bx bx-menu' id="menu-icon"></i>
-
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#education">Education</a>
             <a href="#services">Services</a>
-            <a href="#testmonials">Testmonails</a>
-            <a href="#contact">Contact</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact Us</a>
         </nav>
     </header>
+
+    <!-- Mobile menu for small screens -->
+    <nav class="mobile-menu">
+        <a href="#home" class="active">Home</a>
+        <a href="#education">Education</a>
+        <a href="#services">Services</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
 
     <section class="home" id="home">
         <div class="home-content">
@@ -63,7 +72,7 @@
       ></df-messenger>
     </section>
 
-    <section class="education" id="education">
+    <section id="education" class="education">
         <h2 class="heading">Education</h2>
 
         <div class="timeline-items">
@@ -172,7 +181,7 @@
         </div>
     </section>
 
-    <section class="testmonials" id="testmonials">
+    <section class="testmonials" id="testimonials">
         <div class="testmonials-box">
             <h2 class="heading">Testimonials</h2>
 
@@ -232,7 +241,7 @@
     </section>
 
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
+        <h2 class="heading">Contact <span>Us</span></h2>
 
         <form action="">
             <div class="input-group">
@@ -249,7 +258,7 @@
 
             <div class="input-group-2">
                 <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-                <input type="submit" value="Send Message" class="btn">
+                <button type="submit" class="sendmessage-btn">Send Message</button>
             </div>
         </form>
     </section>
@@ -276,11 +285,11 @@
             </li>
 
             <li>
-                <a href="#contact">Contact</a>
+                <a href="#contact">Contact Us</a>
             </li>
 
             <li>
-                <a href="#testmonials">Testimonials</a>
+                <a href="#testimonials">Testimonials</a>
             </li>
         </ul>
         <p class="copyright">
@@ -299,6 +308,49 @@
             }
         });
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const sections = document.querySelectorAll('section');
+          const navLinks = document.querySelectorAll('.navbar a');
+      
+          const observerOptions = {
+            root: null, 
+            rootMargin: '0px',
+            threshold: 0.2 
+          };
+      
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                console.log(entry.target.id);
+              if (entry.isIntersecting) {
+                const sectionID = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                  link.classList.remove('active');
+                  if (link.getAttribute('href') === '#' + sectionID) {
+                    link.classList.add('active');
+                  }
+                });
+              }
+            });
+          }, observerOptions);
+      
+          sections.forEach(section => {
+            observer.observe(section);
+          });
+        });
+      </script>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.querySelector('.mobile-menu');
+    
+        menuIcon.addEventListener('click', function() {
+
+            mobileMenu.classList.toggle('show');
+        });
+    });</script>
     <!-- <script src="script.js"></script> -->
 </body>
 </html>

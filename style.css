@@ -22,7 +22,7 @@ df-messenger {
     --df-messenger-chat-background-color: #fafafa;
     --df-messenger-font-color: black;
     --df-messenger-send-icon: #878fac;
-    position: fixed;
+    /* position: fixed; */
     bottom: 20px;
     right: 20px;
 }
@@ -51,7 +51,9 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 4rem 12% 4rem;
+    padding top: 15px;
+    padding-bottom: 15px;
+    padding: 20px 100px;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     display: flex;
@@ -99,24 +101,33 @@ body {
 
 section {
     min-height: 100%;
-    padding: 10rem 12% 10rem;
+    padding:20px 12% 5px;
     width: 100%;
 }
 
 .home {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 15rem;
+    padding-top: 100px;
+    padding-left: 60px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+p {
+    text-align: justify; 
 }
 
 .home-content {
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    text-align: left;
+    text-align: justify;
     justify-content: center;
     margin-top: 3rem;
+    padding-bottom: 160px;
 }
 
 span {
@@ -189,31 +200,33 @@ span {
     background-color: var(--main-color);
 }
 
-.btn,
-.bot {
+.btn-group .btn,
+.btn-group .bot {
     display: inline-block;
     padding: 1rem 2.8rem;
-    background: var(--main-color);
-    box-shadow: 0 0 25px var(--main-color);
+    background-color: black; 
+    box-shadow: 0 0 25px transparent; 
     border-radius: 4rem;
     font-size: 1.6rem;
-    color: black;
-    border: 2px solid transparent;
+    color: var(--main-color);
+    border: 2px solid var(--main-color); 
     letter-spacing: 0.1rem;
     font-weight: 600;
     transition: 0.3s ease-in-out;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center; 
 }
 
-.btn:hover {
+
+.btn-group .btn:hover,
+.btn-group .bot:hover {
+    box-shadow: 0 0 25px var(--main-color); 
+    background-color: var(--main-color); 
+    color: black; 
     transform: scale(1.05);
-    box-shadow: 0 0 50px var(--main-color);
 }
 
-.bot:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 50px var(--main-color);
-}
 
 .btn-group {
     display: flex;
@@ -221,18 +234,33 @@ span {
     gap: 1.5rem;
 }
 
-.btn-group a:nth-of-type(2){
-    background-color: black;
-    color: var(--main-color);
-    border: 2px solid var(--main-color);
-    box-shadow: 0 0 25px transparent;
-}
 
-.btn-group a:nth-of-type(2):hover{
+.sendmessage-btn:hover {
     box-shadow: 0 0 25px var(--main-color);
     background-color: var(--main-color);
     color: black;
+    transform: scale(1.05);
 }
+
+.sendmessage-btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black; 
+    box-shadow: 0 0 25px transparent; 
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--main-color);
+    border: 2px solid var(--main-color); 
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center; 
+}
+
+.sendmessage-btn 
+
 
 .text-animation {
     font-size: 34px;
@@ -249,6 +277,7 @@ span {
     color: var(--main-color);
     animation: words 10s infinite;
 }
+
 
 @keyframes words{
     0%,
@@ -280,8 +309,9 @@ span {
 }
 
 .education {
-    padding: 100px 15px;
+    padding: 25px 35px;
     background: var(--second-bg-color);
+    padding-bottom: 35px;
 }
 
 .education h2 {
@@ -389,6 +419,9 @@ span {
 .services {
     background: var(--bg-color);
     color: black;
+    padding-bottom: 35px;
+    padding-left: 35px;
+    padding-right: 35px;
 }
 
 .services h2 {
@@ -443,6 +476,7 @@ span {
 
 .testmonials {
     background: var(--second-bg-color);
+    padding-bottom: 80px;
 }
 
 .testmonials-box {
@@ -723,6 +757,8 @@ span {
         width: 100%;
     }
 
+    
+
     .timeline-items::before {
         left: 7px;
     }
@@ -820,8 +856,17 @@ span {
 }
 
 @media(max-width:895px) {
-    #menu-icon {
-        display: block;
+    .home {
+
+        padding-top: 35px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 0px;
+    }
+
+
+    .home-content {
+        padding-bottom: 35px;
     }
 
     .navbar {
@@ -959,18 +1004,93 @@ span {
     .contact form {
         display: block;
     }
+}
 
-    /* #toggleBotButton {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: red;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-size: 16px;
-        border-radius: 5px;
-        z-index: 1000;
-    } */
+
+
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 60px; 
+    left: 0;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.mobile-menu a {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.mobile-menu a:hover {
+    color: var(--main-color);
+}
+
+
+@media only screen and (min-width: 344px) and (max-width: 550px) {
+    .header .navbar {
+        display: none; 
+    }
+
+    #menu-icon {
+        display: block; 
+    }
+
+    .mobile-menu.show {
+        display: flex; 
+    }
+
+
+
+    .timeline-items::before {
+        left: 7px;
+    }
+
+    .timeline-item:nth-child(odd) {
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        padding-left: 37px;
+    }
+
+    .timeline-dot {
+        left: 0;
+    }
+
+    .home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        padding-top: 35px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 0px;
+    }
+
+
+    .home-content {
+        padding-bottom: 35px;
 }
