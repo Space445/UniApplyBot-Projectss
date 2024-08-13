@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.navbar a');
+    const navLinks = document.querySelectorAll('.navbar a, .mobile-menu a');
 
     const observerOptions = {
       root: null, 
@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const botElement = document.querySelector('df-messenger');
       if (botElement.style.display === 'none') {
           botElement.style.display = 'block';
-          this.textContent = 'Close Bot';
+          this.textContent = 'Bot';
       } else {
           botElement.style.display = 'none';
-          this.textContent = 'Open Bot';
+          this.textContent = 'Bot';
       }
     });
 
