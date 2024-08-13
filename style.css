@@ -974,6 +974,13 @@ span {
 
     .service-box {
         transition: 0.4s ease-in-out;
+        background-color: var(--main-color);
+        height: 200px;
+        border-radius: 3rem;
+        border: 5px solid transparent;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+       
     }
     
     .service-box:hover {
@@ -1057,6 +1064,17 @@ span {
 
     .mobile-menu.show {
         display: flex; 
+    }
+
+    .service-box {
+        transition: 0.4s ease-in-out;
+        background-color: var(--main-color);
+        height: 200px;
+        border-radius: 3rem;
+        border: 5px solid transparent;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+        padding: 1em 1em;
     }
 
 
