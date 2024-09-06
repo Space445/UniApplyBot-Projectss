@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="register.js" defer></script>
+    <script src="https://kit.fontawesome.com/6d06f9f594.js" crossorigin="anonymous"></script>
+</head>
+<body class="home">
+    <header class="login-header">
+        <img src="./image/logo.webp" class="logo">
+    </header>
+
+    <section class="home-login">
+        <div class="wrapper">
+            <div class="form-box register">
+                <h2>Registration</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-user"></i></span>
+                        <input type="text" id="username" required>
+                        <label>Username</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                        <input type="email" id="email2" required>
+                        <label>Email</label>
+                    </div>
+
+                    <div class="input-box2">
+                        <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" id="password2" required>
+                        <span class="eye" style="color: #7a797e"><i class="fa-solid fa-eye" id="eye2" onclick="toggle()"></i></span>
+                        <label>Password</label>
+                    </div>
+
+                    <div class="remember-forget2">
+                        <label><input type="checkbox" required>I agree to the <a href="#"><b>Terms & Conditions</b></a></label>
+                    </div>
+
+                    <button type="submit" class="btn" id="register">Register</button>
+                    
+                    <div class="login-register">
+                        <p>Already have an account? <a href="/public/frontend/login.html" class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
