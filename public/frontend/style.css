@@ -9,7 +9,7 @@
 
 ::selection{
   color: #fff;
-  background: #d23e3e;
+  background:#00ffee;
 }
 
 header{
@@ -195,6 +195,7 @@ header{
     top: -1px;
     font-size: 1.2em;
     line-height: 57px;
+    color:aqua;
 }
 
 .input-box2 .icon{
@@ -203,6 +204,7 @@ header{
     top: 1px;
     font-size: 1.2em;
     line-height: 57px;
+    color:aqua;
 }
 
 .remember-forget{
@@ -214,7 +216,7 @@ header{
 }
 
 .remember-forget label input{
-    accent-color: #d23e3e;
+    accent-color: #00ffee;
     margin-right: 3px;
 }
 
@@ -224,7 +226,7 @@ header{
 }
 
 .remember-forget a:hover{
-    color: #d23e3e;
+    color: #00ffee;
     text-decoration: underline;
 }
 
@@ -236,7 +238,7 @@ header{
 }
 
 .remember-forget2 label input{
-    accent-color: #d23e3e;
+    accent-color:#00ffee;
     margin-right: 3px;
 }
 
@@ -246,7 +248,7 @@ header{
 }
 
 .remember-forget2 a:hover{
-    color: #d23e3e;
+    color:#00ffee;
     text-decoration: underline;
 }
 
@@ -254,7 +256,7 @@ header{
     width: 100%;
     margin-top: 10px;
     height: 45px;
-    background: #d23e3e;
+    background: #00ffee;
     border: none;
     border-radius: 20px;
     color: white;
@@ -265,7 +267,7 @@ header{
 
 .btn:hover{
     background: white;
-    color: #d23e3e;
+    color: #00ffee;
 }
 
 .login-register{
@@ -287,7 +289,7 @@ header{
 }
 
 .login-register p a:hover{
-    color: #d23e3e;
+    color:#00ffee;
     text-decoration: underline;
 }
 
