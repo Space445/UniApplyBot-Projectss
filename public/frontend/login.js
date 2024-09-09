@@ -11,7 +11,7 @@ function toggle() {
         state = false;
     } else {
         passwordField.setAttribute('type', 'text');
-        eye.style.color = '#d23e3e';
+        eye.style.color = '#FFFFFF';
         state = true;
     }
 }
