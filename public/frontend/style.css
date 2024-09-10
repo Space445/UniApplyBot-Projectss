@@ -9,7 +9,7 @@
 
 ::selection{
   color: #fff;
-  background: #d23e3e;
+  background:#00ffee;
 }
 
 header{
@@ -195,6 +195,7 @@ header{
     top: -1px;
     font-size: 1.2em;
     line-height: 57px;
+    color: white;
 }
 
 .input-box2 .icon{
@@ -203,6 +204,7 @@ header{
     top: 1px;
     font-size: 1.2em;
     line-height: 57px;
+    color: white;
 }
 
 .remember-forget{
@@ -214,7 +216,7 @@ header{
 }
 
 .remember-forget label input{
-    accent-color: #d23e3e;
+    accent-color: #00ffee;
     margin-right: 3px;
 }
 
@@ -224,7 +226,7 @@ header{
 }
 
 .remember-forget a:hover{
-    color: #d23e3e;
+    color: #00ffee;
     text-decoration: underline;
 }
 
@@ -236,7 +238,7 @@ header{
 }
 
 .remember-forget2 label input{
-    accent-color: #d23e3e;
+    accent-color:#00ffee;
     margin-right: 3px;
 }
 
@@ -246,7 +248,7 @@ header{
 }
 
 .remember-forget2 a:hover{
-    color: #d23e3e;
+    color:#00ffee;
     text-decoration: underline;
 }
 
@@ -254,7 +256,7 @@ header{
     width: 100%;
     margin-top: 10px;
     height: 45px;
-    background: #d23e3e;
+    background: #00ffee;
     border: none;
     border-radius: 20px;
     color: white;
@@ -265,7 +267,7 @@ header{
 
 .btn:hover{
     background: white;
-    color: #d23e3e;
+    color: #00ffee;
 }
 
 .login-register{
@@ -287,7 +289,7 @@ header{
 }
 
 .login-register p a:hover{
-    color: #d23e3e;
+    color:#00ffee;
     text-decoration: underline;
 }
 
@@ -328,7 +330,28 @@ header {
     height: 100px;
 }
 
+<<<<<<< HEAD
 /* Error message style */
+=======
+.icon3{
+    position: absolute;
+    right: 8px;
+    top: -5px;
+    font-size: 1.2em;
+    line-height: 60px;
+    color: white;
+}
+
+#email-icon {
+    font-style: normal;
+    font-variant: normal;
+    line-height: inherit;
+    text-rendering: auto;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+>>>>>>> 13e9b262a7637941b321cf8eafb8a686862371c7
 .message {
     background-color: hsl(327,90%,28%);
     color: white;
@@ -340,6 +363,7 @@ header {
     animation: fadeOut 7s forwards;
 }
 
+<<<<<<< HEAD
 .tooltip-container {
     position: relative;
     display: inline-block;
@@ -423,3 +447,5 @@ header {
         margin-left: -75px;
     }
 } */
+=======
+>>>>>>> 13e9b262a7637941b321cf8eafb8a686862371c7
