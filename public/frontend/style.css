@@ -195,7 +195,7 @@ header{
     top: -1px;
     font-size: 1.2em;
     line-height: 57px;
-    color:aqua;
+    color: white;
 }
 
 .input-box2 .icon{
@@ -204,7 +204,7 @@ header{
     top: 1px;
     font-size: 1.2em;
     line-height: 57px;
-    color:aqua;
+    color: white;
 }
 
 .remember-forget{
@@ -330,8 +330,24 @@ header {
     height: 100px;
 }
 
+.icon3{
+    position: absolute;
+    right: 8px;
+    top: -5px;
+    font-size: 1.2em;
+    line-height: 60px;
+    color: white;
+}
 
-/* Error message style */
+#email-icon {
+    font-style: normal;
+    font-variant: normal;
+    line-height: inherit;
+    text-rendering: auto;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
 .message {
     background-color: hsl(327,90%,28%);
     color: white;
@@ -342,3 +358,4 @@ header {
     opacity: 0;
     animation: fadeOut 7s forwards;
 }
+
