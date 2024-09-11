@@ -330,9 +330,7 @@ header {
     height: 100px;
 }
 
-<<<<<<< HEAD
 /* Error message style */
-=======
 .icon3{
     position: absolute;
     right: 8px;
@@ -351,7 +349,6 @@ header {
     -webkit-font-smoothing: antialiased;
 }
 
->>>>>>> 13e9b262a7637941b321cf8eafb8a686862371c7
 .message {
     background-color: hsl(327,90%,28%);
     color: white;
@@ -363,7 +360,6 @@ header {
     animation: fadeOut 7s forwards;
 }
 
-<<<<<<< HEAD
 .tooltip-container {
     position: relative;
     display: inline-block;
@@ -403,6 +399,10 @@ header {
     .tooltip-text {
         width: 150px;
         margin-left: -75px;
+    }
+
+    .login-header{
+        display: none;
     }
 }
 
@@ -447,5 +447,3 @@ header {
         margin-left: -75px;
     }
 } */
-=======
->>>>>>> 13e9b262a7637941b321cf8eafb8a686862371c7
