@@ -67,21 +67,41 @@
             <img src="images/IMG-20220921-WA0008.jpg" alt="code snippet">
         </div>
 
-        <!-- Chatbot integration -->
-        <!-- <df-messenger 
-            intent="WELCOME" 
-            chat-title="UniApplyBot" 
-            agent-id="0f82854e-dc09-4500-aba1-3cd3b951fdae"
-            language-code="zu">
-        </df-messenger> -->
+        <div>
+            <label for="languageSelect">Choose Language: </label>
+            <select id="languageSelect" onchange="setLanguage()">
+                <option value="en">English</option>
+                <option value="zu">Zulu</option>
+            </select>
+        </div>
+    
+        <!-- Chatbot container -->
+        <div id="chatbot-container">
+            <df-messenger
+                chat-title="UniApplyBot"
+                agent-id="0f82854e-dc09-4500-aba1-3cd3b951fdae"
+                language-code="en">
+            </df-messenger>
+        </div>
 
-
-        <df-messenger 
-            intent="WELCOME" 
-            chat-title="UniApplyBot" 
-            agent-id="0f82854e-dc09-4500-aba1-3cd3b951fdae">
-        </df-messenger>
-
+        <script>
+            function setLanguage() {
+                const language = document.getElementById('languageSelect').value;
+                const chatbotContainer = document.getElementById('chatbot-container');
+                
+                const existingMessenger = chatbotContainer.querySelector('df-messenger');
+                if (existingMessenger) {
+                    chatbotContainer.removeChild(existingMessenger);
+                }
+    
+                const dfMessenger = document.createElement('df-messenger');
+                dfMessenger.setAttribute('chat-title', 'UniApplyBot');
+                dfMessenger.setAttribute('agent-id', language === 'en' ? '0f82854e-dc09-4500-aba1-3cd3b951fdae' : '0a44566d-bfa6-4c72-844a-aba2c7132065');
+                dfMessenger.setAttribute('language-code', language);
+    
+                chatbotContainer.appendChild(dfMessenger);
+            }
+        </script>
     </section>
 
     <section id="education" class="education">
