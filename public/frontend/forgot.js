@@ -10,7 +10,7 @@ function showMessage(message, divId) {
 
     setTimeout(() => {
         messageDiv.style.opacity = 0;
-    }, 5000)
+    }, 4000)
 }
 
 try {
@@ -23,12 +23,13 @@ try {
 
         sendPasswordResetEmail(auth, email)
         .then(() => {
-            showMessage("Password reset email sent!", "ForgotMessage");
+            showMessage("Password reset email sent, check your emails.", "ForgotMessage");
             window.location.href = "./login.html"
         })
         .catch ((error) => {
             const errorCode = error.code;
-            showMessage(errorCode, "ForgotMessage")
+            console.log(errorCode);
+            showMessage("Emails is required.", "ForgotMessage")
         })
     })
 } catch {
