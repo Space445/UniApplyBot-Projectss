@@ -270,6 +270,17 @@ span {
     min-width: 280px;
 }
 
+.logoutOne {
+    background: transparent;
+}
+
+.logoutTwo {
+    color: white;
+    padding: 10px 0px;
+    font: 15.36px 'Poppins', sans-serif !important;
+    background: transparent;
+}
+
 .text-animation span {
     position: relative;
 }
