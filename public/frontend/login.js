@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             state = false;
         } else {
             passwordField.setAttribute('type', 'text');
-            eyeBtn.style.color = '#d23e3e';
+            eyeBtn.style.color = '#ffffff';
             state = true;
         }
 
