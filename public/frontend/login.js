@@ -33,7 +33,7 @@ function showMessage(message, divId) {
 
     setTimeout(() => {
         messageDiv.style.opacity = 0;
-    }, 5000)
+    }, 4000)
 }
 
 const loginBtn = document.getElementById("login");
@@ -45,12 +45,12 @@ loginBtn.addEventListener('click', async (e) => {
     const password = document.getElementById("password").value;
 
     if(email === ""){
-        showMessage("Email is required*", "SignInMessage");
+        showMessage("Email is required.", "SignInMessage");
         return;
     }
 
     if(!validateEmail(email)) {
-        showMessage("Please enter a valid email address", "SignInMessage");
+        showMessage("Please enter a valid email address.", "SignInMessage");
         return;
     }
 
@@ -71,19 +71,18 @@ loginBtn.addEventListener('click', async (e) => {
     // });
 
     if(password === ""){
-        showMessage("Password is required*", "SignInMessage");
+        showMessage("Password is required.", "SignInMessage");
         return;
     }
 
-    // if(password.length < 6){
-    //     showMessage("Password must be at least 6 characters long", "SignInMessage");
-    //     return;
-    // }
+    if(password.length < 6){
+        showMessage("Password must be at least 6 characters long.", "SignInMessage");
+        return;
+    }
 
     try{
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            showMessage("Login Successful", "SignInMessage");
             const user = userCredential.user;
             localStorage['loggedInUserId'] = user.uid;
             window.location.href = "../UniApplyBot/index.html"
@@ -93,10 +92,10 @@ loginBtn.addEventListener('click', async (e) => {
 
             if(errorCode === "auth/invalid-credentails")
             {
-                showMessage("Invalid Email or Password",  "SignInMessage");
+                showMessage("Invalid Email or Password.",  "SignInMessage");
             } 
             else {
-                showMessage("Invalid Email or Password", "SignInMessage");
+                showMessage("Invalid Email or Password.", "SignInMessage");
             }
         })
     } catch {
