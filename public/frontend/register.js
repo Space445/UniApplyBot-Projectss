@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             state = false;
         } else {
             passwordField.setAttribute('type', 'text');
-            eyeBtn.style.color = '#d23e3e';
+            eyeBtn.style.color = '#ffffff';
             state = true;
         }
     }
@@ -35,7 +35,7 @@ function showMessage(message, divId) {
 
     setTimeout(() => {
         messageDiv.style.opacity = 0;
-    }, 5000)
+    }, 4000)
 }
 
 // const passwordInput = document.getElementById('password');
@@ -75,32 +75,32 @@ registerBtn.addEventListener('click', (e) => {
     // const password = passwordInput.value;
 
     if (!username) {
-        showMessage("Username is required*", "RegMessage");
+        showMessage("Username is required.", "RegMessage");
         return;
     }
 
     if(!validateUsername(username)) {
-        showMessage("Username must be at least 4 characters long*", "RegMessage");
+        showMessage("Username must be at least 4 characters long.", "RegMessage");
         return;
     }
 
     if(!email) {
-        showMessage("Email is required*", "RegMessage");
+        showMessage("Email is required.", "RegMessage");
         return;
     }
 
     if(!validateEmail(email)) {
-        showMessage("Please enter a valid email address*", "RegMessage");
+        showMessage("Please enter a valid email address.", "RegMessage");
         return;
     }
 
     if (!password) {
-        showMessage("Password is required*", "RegMessage");
+        showMessage("Password is required.", "RegMessage");
         return;
     }
 
     if(password.length < 6){
-        showMessage("Password must be at least 6 characters long", "RegMessage");
+        showMessage("Password must be at least 6 characters long.", "RegMessage");
         return;
     }
 
@@ -120,7 +120,7 @@ registerBtn.addEventListener('click', (e) => {
                 email: email,
                 password: password
             }
-            showMessage("Account created successfully", "RegMessage");
+            showMessage("Account created successfully.", "RegMessage");
 
             const docRef = doc(db, "users", user.uid);
             setDoc(docRef, userData)
@@ -128,7 +128,7 @@ registerBtn.addEventListener('click', (e) => {
                 window.location.href = "./login.html"
             })
             .catch((error) => {
-                console.error("Problem creating the account", error)
+                console.error("Problem creating the account.", error)
             })
         })
         .catch((error) => {
@@ -136,7 +136,7 @@ registerBtn.addEventListener('click', (e) => {
             if(errorCode == "auth/email-already-in-use"){
                 showMessage("Email already exists, try another email.", "RegMessage")
             } else {
-                showMessage("Unable to create the user", "RegMessage")
+                showMessage("Unable to create the user.", "RegMessage")
             }
         })
     } catch {

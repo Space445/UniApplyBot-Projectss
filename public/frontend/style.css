@@ -46,6 +46,7 @@ header{
     align-items: center;
     background: none;
     padding: 0 100px;
+    text-align: center;
 }
 
 .wrapper{
@@ -256,7 +257,7 @@ header{
     width: 100%;
     margin-top: 10px;
     height: 45px;
-    background: #00ffee;
+    background: #00b2b2;
     border: none;
     border-radius: 20px;
     color: white;
@@ -266,8 +267,8 @@ header{
 }
 
 .btn:hover{
-    background: white;
-    color: #00ffee;
+    background:#e0e0e0;
+    color: #00b2b2;
 }
 
 .login-register{
@@ -346,19 +347,20 @@ header {
     line-height: inherit;
     text-rendering: auto;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;  
 }
 
 .message {
     background-color: hsl(327,90%,28%);
     color: white;
     padding: 10px 20px;
-    margin:10px;
+    margin-left:300px;
+    margin-right: 300px;
     border-radius: 5px;
     font-size: 1rem;
     opacity: 0;
     animation: fadeOut 7s forwards;
-}
+}z
 
 .tooltip-container {
     position: relative;
