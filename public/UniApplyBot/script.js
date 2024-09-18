@@ -46,3 +46,78 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenu.classList.toggle('show');
     });
 });
+
+
+import { auth } from '../frontend/firebaseAPI.js';
+import { signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+
+try {
+  const logoutBtn = document.getElementById('logout');
+
+  logoutBtn.addEventListener("click", () => {
+    localStorage['loggedInUserId'] = '';
+  
+    signOut(auth)
+    .then(() => {
+      window.location.href = "../frontend/login.html"
+    })
+    .catch((error) => {
+      console.error("Error signing out", error)
+    })
+  })
+} catch {
+  console.log("Failed to log out.")
+}
+
+try {
+  const logout2 = document.getElementById("logout2");
+
+  logout2.addEventListener("click", () => {
+    signOut(auth)
+    .then(() => {
+      window.location.href = "../frontend/login.html"
+    })
+    .catch((error) => {
+      console.error("Error signing out", error)
+    })
+  })
+} catch {
+  console.log("Failed to log out.")
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// FAQ Collapser
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active1");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
